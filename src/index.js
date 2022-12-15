@@ -1,4 +1,5 @@
 const root = document.querySelector("#root");
+const search = documen.querySelector("input");
 
 console.log(root);
 
@@ -21,15 +22,20 @@ function createBioCard(user) {
   </section>
     `;
 }
-root.classList.add(
-  "container",
-  "mx-auto",
-  "items-center",
-  "grid",
-  "grid-cols-3",
-  "gap-4"
-);
+
+function filterByName(letters, listOfNames) {}
+root.classList.add("flex", "flex-col", "gap-y-4", "items-center");
 
 const bioCardsHTML = users.map(createBioCard).join("");
 
-root.innerHTML = bioCardsHTML;
+root.classList.add("flex", "flex-col", "gap-y-4", "items-center");
+
+root.innerHTML = `
+<div>
+<label for="search" class="sr-only">Search</label>
+<input type="search" id="search" placeholder="🔍" />
+</div>
+<main class=" items-center grid grid-cols-3 gap-4">
+  ${bioCardsHTML}
+</main
+`;
