@@ -23,7 +23,9 @@ function createBioCard(user) {
     `;
 }
 
-function filterByName(letters, listOfNames) {}
+function filterByName(letters, listOfUsers) {
+  return listOfUsers.filter(() => {});
+}
 root.classList.add("flex", "flex-col", "gap-y-4", "items-center");
 
 const bioCardsHTML = users.map(createBioCard).join("");
